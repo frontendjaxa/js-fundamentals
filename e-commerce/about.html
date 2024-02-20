@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design UI</title>
+    <style>
+      body,
+      h2,
+      p,
+      sub {
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 27px 135px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #b0bac3;
+      }
+
+      .container h2 {
+        font-family: sans-serif;
+        display: inline-block;
+      }
+
+      .container ul {
+        margin: 0;
+      }
+
+      .search-bar {
+        background-color: #ebeff4;
+        color: #757272;
+        padding: 0.3rem;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .search-bar img {
+        padding-left: 20px;
+      }
+
+      .navbar li {
+        display: inline;
+      }
+
+      .navbar li a {
+        color: black;
+        text-decoration: none;
+        font-family: sans-serif;
+        padding: 10px 15px;
+        display: inline-block;
+      }
+
+      .navbar li a:hover {
+        color: coral;
+      }
+
+      .main-content {
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+        padding-top: 4rem;
+        box-sizing: border-box;
+      }
+
+      .main-content img {
+        margin-bottom: 70px;
+      }
+
+      .account-create {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .input-box {
+        color: #b0bac3;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        width: 50%;
+      }
+
+      .input-box input {
+        width: 100%;
+        color: #b0bac3;
+        display: flex;
+        justify-content: flex-start;
+        border: none;
+        border-bottom: 1px solid #b0bac3;
+        outline: none;
+        box-sizing: border-box;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .submit-btn {
+        width: 50%;
+        display: flex;
+        background-color: #db4444;
+        color: #fff;
+        padding: 1rem 2rem;
+        font-weight: 600;
+        cursor: pointer;
+        justify-content: center;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+      .login-box {
+        width: 50%;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+        border: 1px solid;
+        border-radius: 5px;
+        cursor: pointer;
+        box-sizing: border-box;
+      }
+
+      .text {
+        color: #000000;
+        width: 50%;
+        text-align: center;
+      }
+
+      footer {
+        width: 100%;
+        background-color: black;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6rem;
+        padding: 24px;
+      }
+      .header {
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: 500;
+      }
+      .exclusive {
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .info-box {
+        width: 87%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 3rem;
+      }
+
+      .input-container {
+        display: flex;
+        gap: 0.5rem;
+        border: 1px solid #fff;
+        padding: 12px 16px;
+      }
+
+      .input-container input {
+        outline: none;
+        background-color: transparent;
+        border: none;
+        color: white;
+      }
+
+      .text-support {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .text-support button {
+        width: 12%;
+        background-color: black;
+        color: #757272;
+        padding: 0.4rem;
+        display: flex;
+        align-items: center;
+      }
+      .address {
+        width: 75%;
+        display: block;
+      }
+
+      .text-support li {
+        list-style: none;
+      }
+
+      .icon {
+        display: flex;
+        justify-content: space-around;
+      }
+      .footer-bottom {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        color: white;
+        border-top: 1px solid rgb(62, 62, 62);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <h2>Exclusive</h2>
+        <ul class="navbar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+        <div class="search-bar">
+          <sub>What are you looking for</sub>
+          <img src="./assets/logins/Component 2.png" alt="send" />
+        </div>
+      </div>
+      <div class="main-content">
+        <img
+          src="./assets/logins/side.png"
+          width="700px"
+          height="650"
+          alt="Image"
+        />
+        <div class="account-create">
+          <div>
+            <span>Create an account</span>
+            <p>Enter your details below</p>
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Name" id="name" />
+          </div>
+          <div class="input-box">
+            <input
+              type="email"
+              placeholder="Email or Phone number"
+              id="email"
+            />
+          </div>
+          <div class="input-box">
+            <input type="password" placeholder="Password" id="password" />
+          </div>
+
+          <div class="login-form"></div>
+          <div class="submit-btn" id="submit-btn" onclick="submitInfo()">
+            Create Account
+          </div>
+
+          <div class="login-box">Sign up with Google</div>
+
+          <div class="text">
+            <span> <b>Already have a account?</b></span>
+            <span style="cursor: pointer; text-decoration: underline"
+              >Log in</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="info-box">
+        <div class="text-support">
+          <span class="header exclusive">Exclusive</span>
+          <span>Subscribe</span>
+          <span>Get 10% off yor first order</span>
+          <div class="input-container">
+            <input type="text" placeholder="Enter your email" />
+            <img src="./assets/common/send.png" alt="send" />
+          </div>
+        </div>
+        <div class="text-support">
+          <span class="header">Support</span>
+          <span class="address"
+            >111 Bijoy sarani, Dhaka,DH 1515,Bangladesh</span
+          >
+          <span>exclusive@gmail.com</span>
+          +88015-88888-9999
+        </div>
+        <div class="text-support">
+          <span class="header">Account</span>
+          <li>My Account</li>
+          <li>Login / Register</li>
+          <li>Cart</li>
+          <li>Wishlist</li>
+          <li>Shop</li>
+        </div>
+        <div class="text-support">
+          <span class="header">Quick Link</span>
+          <li>Privacy Policy</li>
+          <li>Terms Of Use</li>
+          <li>FAQ</li>
+          <li>Contact</li>
+        </div>
+        <div class="text-support">
+          <span class="header">Downlaod App</span>
+          <sub>Save $3 with App New User Only</sub>
+          <div class="#">
+            <img src="./assets/logins/Frame 719.png" alt="" />
+          </div>
+          <div class="icon">
+            <img src="./assets/logins/Icon-Facebook.png" alt="" />
+            <img src="./assets/logins/Icon-Twitter.png" alt="" />
+            <img src="./assets/logins/icon-instagram.png" alt="" />
+            <img src="./assets/logins/Icon-Linkedin.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">Copyright Rimel 2022. All right reserved</div>
+    </footer>
+  </body>
+</html>

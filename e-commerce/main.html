@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+    <style>
+      body h2 {
+        padding: 0;
+        margin: 0;
+      }
+
+      header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #ccc;
+      }
+
+      header h2 {
+        margin: 40px;
+      }
+
+      header nav {
+        display: flex;
+        float: right;
+      }
+
+      header nav ul {
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid red;
+        gap: 1rem;
+        text-decoration: none;
+        list-style: none;
+      }
+
+      header nav ul li a {
+        text-decoration: none;
+        list-style: none;
+        display: block;
+      }
+
+      .search-bar {
+        background-color: #ebeff4;
+        color: #757272;
+        padding: 0.3rem;
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .main-content {
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+        padding-top: 4rem;
+        box-sizing: border-box;
+      }
+
+      .main-content img {
+        display: flex;
+      }
+
+      .account-create {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .input-box {
+        color: #b0bac3;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        width: 50%;
+      }
+
+      .input-box input {
+        width: 100%;
+        color: #b0bac3;
+        display: flex;
+        justify-content: flex-start;
+        border: none;
+        border-bottom: 1px solid #b0bac3;
+        outline: none;
+        box-sizing: border-box;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+
+      .submit-btn {
+        width: 50%;
+        display: flex;
+        background-color: #db4444;
+        color: #fff;
+        padding: 1rem 2rem;
+        font-weight: 600;
+        cursor: pointer;
+        justify-content: center;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+
+      .login-box {
+        width: 50%;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+        border: 1px solid;
+        border-radius: 5px;
+        cursor: pointer;
+        box-sizing: border-box;
+      }
+
+      .text {
+        color: #000000;
+        width: 50%;
+        text-align: center;
+      }
+
+      /* .container {
+        width: 100%;
+        background-color: black;
+        padding: 150px;
+        box-sizing: border-box;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- Header section -->
+    <header>
+      <div>
+        <h2>Exclusive</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Sign Up</a></li>
+          </ul>
+        </nav>
+        <div class="search-bar">
+          What are you looking for
+          <img src="./assets/logins/Component 2.png" alt="send" />
+        </div>
+      </div>
+    </header>
+
+    <!-- Main section -->
+    <section class="main-content">
+      <img
+        src="./assets/logins/side.png"
+        width="700px"
+        height="650"
+        alt="Image"
+      />
+      <div class="account-create">
+        <div>
+          <span>Create an account</span>
+          <p>Enter your details below</p>
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Name" id="name" />
+        </div>
+        <div class="input-box">
+          <input type="email" placeholder="Email or Phone number" id="email" />
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" id="password" />
+        </div>
+
+        <div class="login-form"></div>
+        <div class="submit-btn" id="submit-btn" onclick="submitInfo()">
+          Create Account
+        </div>
+
+        <div class="login-box">Sign up with Google</div>
+
+        <div class="text">
+          <span> Already have a account?</span>
+          <span style="cursor: pointer; text-decoration: underline"
+            >Log in</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="container">
+      <div class="support-box"></div>
+
+      <div class="support-box"></div>
+      <div class="support-box"></div>
+      <div class="support-box"></div>
+    </footer>
+
+    <!-- <script>
+      const loginInfo = {
+        name: "",
+        email: "",
+        password: "",
+      };
+      const name = document.getElementById("name");
+
+      name.addEventListener("input", function (event) {
+        console.log(event.target.value);
+        loginInfo.name = event.target.value;
+      });
+
+      const email = document.getElementById("email");
+      email.addEventListener("input", function (event) {
+        loginInfo.email = event.target.value;
+        console.log("", event.target.value);
+      });
+      const password = document.getElementById("password");
+      password.addEventListener("input", function (event) {
+        loginInfo.password = event.target.value;
+        console.log(event.target.value);
+      });
+
+      // const submitBtn = document.getElementById("submit-btn");
+
+      // submitBtn.addEventListener("click", function () {
+      //   console.log(loginInfo);
+      // });
+
+      function submitInfo() {
+        console.log(loginInfo);
+      }
+
+      let firstName = "Sirojiddin";
+      let age = 28;
+
+      console.log("hello: " + firstName + " " + age);
+      console.log(`hello: ${firstName} ${age}`);
+
+      function addNumbers() {
+        return 3 + 8;
+      }
+
+      function AddTwoNumbers(num1, num2) {
+        return num1 + num2;
+        let number = 10;
+        console.log("Nunber", number);
+      }
+      console.log(addNumbers());
+      console.log(AddTwoNumbers(2, 3)); // calling function
+      console.log(AddTwoNumbers(5, 3)); // calling function
+      console.log(AddTwoNumbers(7, 3)); // calling function
+      console.log(AddTwoNumbers(10, 3));
+    </script> -->
+  </body>
+</html>
